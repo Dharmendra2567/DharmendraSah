@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-const randomQuotes = require('random-quotes');
 
 const Quote = () => {
     var quote = [
