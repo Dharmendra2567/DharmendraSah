@@ -32,8 +32,8 @@ const Navbar = () => {
     };
 
     return (
-        <div className='container-fluid'>
-            <div className='row fixed-top mb-5' style={{ opacity: isMenuOpen ? '1.0' : '0.9' }}>
+        <div className='container-fluid fixed-top'>
+            <div className='row' style={{ opacity: isMenuOpen ? '1.0' : '0.9' }}>
             <nav className="navbar navbar-expand-lg custom-bg">
                 <div className="container-fluid nav-font">
                     <Link className="navbar-brand custom-font px-lg-3">Dharmendra Sah</Link>
