@@ -32,12 +32,13 @@ const Navbar = () => {
     };
 
     return (
-        <div className='row sticky'>
+        <div className='container-fluid'>
+            <div className='row fixed-top mb-5' style={{ opacity: isMenuOpen ? '1.0' : '0.9' }}>
             <nav className="navbar navbar-expand-lg custom-bg">
                 <div className="container-fluid nav-font">
                     <Link className="navbar-brand custom-font px-lg-3">Dharmendra Sah</Link>
-                    <button className="navbar-toggler" type="button" onClick={handleToggleClick} data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded={isMenuOpen} aria-label="Toggle navigation">
-                        <span>{isMenuOpen ? '✖' : <span className="navbar-toggler-icon"></span>}</span>
+                    <button  className="navbar-toggler" type="button" onClick={handleToggleClick} data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded={isMenuOpen} aria-label="Toggle navigation">
+                        <span >{isMenuOpen ? '✖' : <span className="navbar-toggler-icon" style={{fontWeight:'900'}}></span>}</span>
                     </button>
                     <div className={`collapse navbar-collapse ${isMenuOpen ? 'show' : ''}`} id="navbarNav">
                         <ul className="navbar-nav">
@@ -57,6 +58,7 @@ const Navbar = () => {
                     </div>
                 </div>
             </nav>
+        </div>
         </div>
     );
 };

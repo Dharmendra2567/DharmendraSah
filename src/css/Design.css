@@ -6,9 +6,17 @@
     /* Dark Gray */
 }
 
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+  }
 .custom-font {
     white-space: nowrap;
     font-family: 'Pacifico', cursive;
+    font-weight: 900;
     font-size: 30px;
     color: linear-gradient(90deg, #8e44ad, #f39c12);
     /* Gradient from purple to orange */
@@ -34,6 +42,7 @@
 }
 
 .navbar-toggler:focus {
+    font-weight: 900;
     outline: none;
     /* Remove focus outline */
     box-shadow: none;
@@ -61,14 +70,14 @@
 
 .intro {
     display: flex;
-    height: 87vh;
+    height: 105vh;
     /* Full viewport height */
     background: linear-gradient(to right, #17062a, #b7b9bd);
     /* Gradient background */
     align-items: center;
 }
 
-@media only screen and (max-width:367px){
+@media only screen and (max-width:767px){
     .intro {
         background: linear-gradient(to bottom, #17062a, #b7b9bd);
  }
@@ -96,6 +105,7 @@
     }
 
     .intro-image {
+        margin-top: 55px;
         width: 100%;
         height: auto;
     }

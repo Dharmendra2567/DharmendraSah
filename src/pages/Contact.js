@@ -8,7 +8,9 @@ export const Contact = () => {
     <>
       <div className='container-fluid' style={{overflowX:'hidden'}}>
         <Navbar/>
-       <ContactSection/>
+      <div className='' style={{marginTop:'60px'}}>
+      <ContactSection/>
+      </div>
        <Footer/>
       </div>
     </>

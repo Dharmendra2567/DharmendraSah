@@ -25,7 +25,7 @@ const HomePage = () => {
 
     return (
         <>
-            <div className='container-fluid'>
+            <div className='container-fluid d-flex flex-column'>
                 <Navbar />
                 <div className='row'>
                     <div className='intro w-100 '>

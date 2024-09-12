@@ -8,7 +8,9 @@ const About = () => {
         <>
             <div className='container-fluid'>
                 <Navbar />
-               <AboutSection/>
+             <div style={{marginTop:'60px'}}>
+             <AboutSection  className=""/>
+             </div>
                 <Footer/>
             </div>
         </>

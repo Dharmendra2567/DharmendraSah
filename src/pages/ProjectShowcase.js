@@ -8,7 +8,9 @@ import { Footer } from '../components/Footer';
         <>
            <div className='container-fluid'>
           <Navbar/>
+          <div className='' style={{marginTop:'60px'}}>
           <ProjectSection/>
+          </div>
           <Footer/>
 
           </div>

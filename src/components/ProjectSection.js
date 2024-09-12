@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { observeIntersection } from '../utility/userInterfaceObserver';
 
  export const ProjectSection = () => {
+    const timelineRef1 = useRef(null);
+    const timelineRef2 = useRef(null);
+    const timelineRef3 = useRef(null);
+    const timelineRef4 = useRef(null);
+
+    useEffect(()=>{
+        observeIntersection([timelineRef1,timelineRef2,timelineRef3,timelineRef4]);
+    },[])
     return (
         <>
            {/* <div className='container-fluid'> */}
@@ -9,7 +18,7 @@ import { Link } from 'react-router-dom';
             <h2 className='text-center mt-3 p-3 header-text'>Project Showcase</h2>
                 <div className='timeline-container d-flex flex-md-nowrap '>
                     <div className='timeline flex-item '>
-                        <div className='timeline-item'>
+                        <div className='timeline-item' ref={timelineRef1}>
                             <div className='timeline-icon'>
                                 <i className='icon-placeholder'></i>
                             </div>
@@ -24,7 +33,7 @@ import { Link } from 'react-router-dom';
                                 </p>
                             </div>
                         </div>
-                        <div className='timeline-item'>
+                        <div className='timeline-item'  ref={timelineRef2}>
                             <div className='timeline-icon'>
                                 <i className='icon-placeholder'></i>
                             </div>
@@ -41,8 +50,8 @@ import { Link } from 'react-router-dom';
                             </div>
                         </div>
                     </div>
-                    <div className='timeline flex-item'>
-                        <div className='timeline-item'>
+                    <div className='timeline flex-item' >
+                        <div className='timeline-item'  ref={timelineRef3}>
                             <div className='timeline-icon'>
                                 <i className='icon-placeholder'></i>
                             </div>
@@ -56,7 +65,7 @@ import { Link } from 'react-router-dom';
                                 </p>
                             </div>
                         </div>
-                        <div className='timeline-item'>
+                        <div className='timeline-item'  ref={timelineRef4}>
                             <div className='timeline-icon'>
                                 <i className='icon-placeholder'></i>
                             </div>

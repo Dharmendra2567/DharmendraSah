@@ -1,6 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef} from 'react'
+import { observeIntersection } from '../utility/userInterfaceObserver'
 
 const Quote = () => {
+    const textRef = useRef(null)
+    const authorRef = useRef(null)
+
+    useEffect(()=>{
+        observeIntersection([textRef,authorRef]);
+    },[]);
     var quote = [
         {
             text: "The only way to do great work is to love what you do.",
@@ -87,17 +94,14 @@ const Quote = () => {
  
   return (
     <>
-     <div className='w-40  text-center d-flex flex-column m-auto justify-content-between align-items-end quote-text'>
+     <div className='w-40  text-center d-flex flex-column m-auto justify-content-between align-items-end quote-text' ref={textRef}>
         <div className='flex-item'>
-        {/* <h1 className='fs-3 justify-content-center' style={{ lineHeight: '16px' }}><i class="bi bi-quote " style={{fontSize:'40px'}}>
-            </i><sub>{quote[11].text}</sub><span><sub><sub><sub><i class="bi bi-quote flipped-text"></i></sub></sub></sub></span></h1>
-      */}
        <span>
-       <h1 className='fs-3 justify-content-center' style={{ lineHeight: '25px' }}><i class="bi bi-quote " style={{fontSize:'40px'}}>
+       <h1 className='fs-3 justify-content-center'   style={{ lineHeight: '25px' }}><i class="bi bi-quote " style={{fontSize:'40px'}}>
             </i><sub>{quote[count].text}</sub></h1>
        </span>
         </div>
-        <div className='flex-item '>
+        <div className='flex-item quote-author' ref={authorRef}>
         <h4 className='text-bottom flex-item mt-2'>~ {quote[count].author}</h4>
         </div>
 
