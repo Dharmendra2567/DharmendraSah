@@ -57,11 +57,12 @@ import { observeIntersection } from '../utility/userInterfaceObserver';
                             </div>
                                 <div className='timeline-line'></div>
                             <div className='timeline-content'>
-                                <h4>2022 Dec - 2023 Aug</h4>
-                                <h5>Senior Software Engineer</h5>
-                                <h6>Abacus Insights</h6>
+                                <h4>2024 Jun - 2024 Aug</h4>
+                                <h5>Flutter App Development</h5>
+                                <Link to={'https://github.com/Dharmendra2567/chitChat-app'} ><h6>chitChat App</h6></Link>
                                 <p>
-                                    Leveraged a powerful tech stack comprising of Databricks, Snowflake, and AWS to efficiently manage data warehouses, ETL workflows, ensuring seamless data processing and delivery.
+                                Utilized a robust tech stack consisting of Dart, Flutter, and Firebase Cloud to effectively handle user data,
+                                 integrated authentication, and enabled seamless text and media sharing throughout the app.
                                 </p>
                             </div>
                         </div>
@@ -71,12 +72,14 @@ import { observeIntersection } from '../utility/userInterfaceObserver';
                             </div>
                             <div className='timeline-line'></div>
                             <div className='timeline-content'>
-                                <h4>2018 Jun - 2022 Nov</h4>
-                                <h5>Software Engineer</h5>
-                                <h6>Cotiviti Nepal</h6>
+                                <h4>2023 Nov - 2024 May</h4>
+                                <h5>MERN Stack Development</h5>
+                                <Link to={'https://github.com/Dharmendra2567/TimeLoggerApplication'}><h6>Time Logger</h6></Link>
                                 <p>
-                                    Developed and implemented a highly efficient data ingestion and data warehouse, tailored specifically for processing US Healthcare data, ensuring seamless data processing and delivery.
-                                </p>
+                                Developed a Time Management web app with user authentication, enabling task logging on any date. 
+                                It enhances the traditional to-do list by calculating total time spent on tasks, helping users efficiently 
+                                track productivity and manage their schedules.
+                                    </p>
                             </div>
                         </div>
                     </div>
