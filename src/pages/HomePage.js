@@ -48,16 +48,19 @@ const HomePage = () => {
                 <div className='row'>
                     <div className='about d-flex flex-column align-items-center justify-content-center' ref={aboutMeRef}>
                         <h1 className='p-4 about-me-header header-text' ref={headerRef}>About Me</h1>
-                        <p className='about-me-text about-text para-text text-lg-center' ref={textRef}>Hello, I’m a Data Engineer with 5+ years of real-world experience. My focus is on data structure, blending,
-                            and conversion. I’m all about converting raw data into useful insights, leveraging cutting-edge tech and smart methods for efficient data solutions. I’m in
-                            Australia now but originally from Nepal. My journey kicked off at Cotiviti, where I spent 4.5 years fine-tuning my skills. After that, I took on the ro
-                            le of Senior Data Engineer at Abacus Insights. I’m super enthusiastic about using data-driven solutions to tackle tough problems.</p>
+                        <p className='about-me-text about-text para-text text-lg-center' ref={textRef}>Hello, I’m a MERN Stack Developer with
+                            2 years of real-world experience. My focus is on building dynamic, responsive web applications and crafting efficient
+                            backend systems. I specialize in transforming user requirements into seamless, feature-rich applications, leveraging
+                            cutting-edge tools and frameworks like MongoDB, Express, React, and Node.js. Currently, I’m based in India, but
+                            I’m originally from Nepal. My journey began with a startup, where I honed my skills over the first year. Later, I worked
+                            on larger projects that refined my expertise in scalable application development and API integration.
+                            I’m passionate about solving complex challenges through innovative, user-centric software solutions.</p>
                         <button className='px-4 m-3 about-button' ref={buttonRef}>Know More</button>
                     </div>
                 </div>
-                <ProjectSection/>
-                <ContactSection/>
-                <Footer/>
+                <ProjectSection />
+                <ContactSection />
+                <Footer />
             </div>
         </>
     );
