@@ -1,3 +1,5 @@
+
+
 .nav-font {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
@@ -32,6 +34,13 @@
 
 .custom-bg {
        background-image: linear-gradient(to right, #357cff, #712ac9);
+}
+.custom-footer-bg {
+    background-image: linear-gradient(to right, #712ac9, #357cff);
+}
+.flex-bg{
+        background-color: #755b96; /* Deep purple for contrast */
+    
 }
 
 .navbar-nav {
@@ -159,7 +168,7 @@
     text-align: center;
 }
 
-button {
+.about button {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 16px;
@@ -170,7 +179,7 @@ button {
     padding-block: 8px;
 
 }
-button:hover,button:focus{
+.about button:hover,button:focus{
     color: black;
 }
 
@@ -183,9 +192,21 @@ button:hover,button:focus{
     width: 60px;
 }
 .contact-icon img{
-    height: 60px;
-    width: 70px;
-    margin: 10px;
+    height: 52px;
+    width: 62px;
+    /* margin: 0px; */
     cursor: pointer;
     
+}
+
+.move-up button{
+    position: fixed;
+    right: 15px;
+    bottom: 23px;
+    z-index: 5;
+    font-size: 29px;
+    background-color: blueviolet;
+    color: rgb(233, 233, 242);
+    border: none;
+    border-radius: 20px;
 }

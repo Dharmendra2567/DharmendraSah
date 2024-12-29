@@ -1,15 +1,38 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
+import { observeIntersection } from '../utility/userInterfaceObserver'
 
 const AboutSection = () => {
+    const h1Ref =useRef(null)
+    const pRef = useRef(null)
+    const h2Ref = useRef(null)
+    const p1Ref = useRef(null);
+    const p2Ref  = useRef(null)
+    const p3Ref = useRef(null)
+    const p4Ref = useRef(null)
+    const p5Ref  = useRef(null)
+     const moveUpRef = useRef(null);
+
+
+    useEffect(()=>{
+        observeIntersection([h1Ref,pRef,h2Ref,p1Ref,p2Ref,p3Ref,p4Ref,p5Ref, moveUpRef]);
+    },[]);
+
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    }
   return (
    <>
-     <iv className="row text-center">
+     <div className="row text-center">
 
 <div className='about d-flex flex-column align-items-center justify-content-center '></div>
-<h1 className='header-text py-3'>Software Enginner</h1>
+<h1  className='header-text py-3 h1' ref={h1Ref}>Software Enginner</h1>
+<div className='ptext' ref={pRef}>
 <p className="about-text para-text text-lg-center">
-    Hello, I’m Dharmendra Sah, a 5th-semester B.Tech student in Computer Science at Lovely Professional University, Punjab. I specialize in Full Stack Development.
+    Hello, I’m Dharmendra Sah, a B.Tech student in Computer Science at Lovely Professional University, Punjab. I specialize in Full Stack Development.
 </p>
 
 <p className="about-text para-text text-lg-center">
@@ -19,15 +42,16 @@ const AboutSection = () => {
 <p className="about-text para-text text-lg-center">
     I excel in Full Stack web and app development, using technologies like MERN and Flutter. Scroll down to see my journey.
 </p>
+</div>
 
-</iv>
+</div>
 <div className='row'>
-<h1 className='header-text text-center py-3'>Software Engineer Journey</h1>
+<h1 className='header-text text-center py-3 h2' ref={h2Ref}>Software Engineer Journey</h1>
 <div className='d-flex flex-lg-nowrap flex-wrap'>
     <div className='journey '>
         <div className='journey-icon '></div>
 
-        <div className='journey-item flex item'>
+        <div className='journey-item flex item p1' ref={p1Ref}>
             <div className='d-flex w-100 flex-lg-nowrap flex-wrap'>
                 <div className='journey-content flex-item w-100' style={{ borderLeft: 'none', }}>
                     <h5 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: '700' }}>Higher Education</h5>
@@ -45,7 +69,7 @@ const AboutSection = () => {
             </div>
         </div>
         {/* //Dursikshya certification */}
-        <div className='journey-item flex item'>
+        <div className='journey-item flex item p2' ref={p2Ref}>
             <div className='d-flex w-100 flex-lg-nowrap flex-wrap'>
                 <div className='journey-content flex-item w-100' style={{ borderLeft: 'none', }}>
                     <h5 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: '700' }}>OJT(On The Job Training)<small>(20022-2024)</small></h5>
@@ -63,7 +87,7 @@ const AboutSection = () => {
             </div>
         </div>
         {/* graduation */}
-        <div className='journey-item flex item'>
+        <div className='journey-item flex item p3' ref={p3Ref}>
             <div className='d-flex w-100 flex-lg-nowrap flex-wrap'>
                 <div className='journey-content flex-item w-100' style={{ borderLeft: 'none', }}>
                     <h5 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: '700' }}> Bachelor's Degree</h5>
@@ -101,7 +125,7 @@ const AboutSection = () => {
             </div>
         </div>
         {/* summer training  */}
-        <div className='journey-item flex item'>
+        <div className='journey-item flex item p4' ref={p4Ref}>
             <div className='d-flex w-100 flex-lg-nowrap flex-wrap'>
                 <div className='journey-content flex-item w-100' style={{ borderLeft: 'none', }}>
                     <h5 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: '700' }}>Summer Training</h5>
@@ -120,16 +144,19 @@ const AboutSection = () => {
                 </div>
             </div>
         </div>
-        ,<div className='journey-item d-flex w-50 m-auto mb-5'>
+        ,<div className='journey-item d-flex w-50 m-auto mb-5 p5' ref={p5Ref}>
             <div className='journey-content w-100'>
-                <h5><b>Currest Status</b></h5>
-                <p>Currently, I am pursuing a B.Tech and am in my 5<sup>th</sup> semester while interning at CodSoft</p>
+                <h5><b>Current Status</b></h5>
+                <p>3<sup>rd</sup> Year B.Tech CSE | Graduating 2026</p>
             </div>
         </div>
 
 
     </div>
 </div>
+<div className='move-up ' ref={moveUpRef}>
+                    <button onClick={scrollToTop} className='btn-primary'><i className='bi bi-arrow-up'></i></button>
+                </div>
 </div>
    </>
   )

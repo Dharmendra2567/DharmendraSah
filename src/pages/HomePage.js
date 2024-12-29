@@ -7,36 +7,45 @@ import ContactSection from '../components/ContactSection';
 import { Footer } from '../components/Footer';
 
 const HomePage = () => {
-    const aboutMeRef = useRef(null);
     const headerRef = useRef(null);
     const textRef = useRef(null);
     const buttonRef = useRef(null);
+    const moveUpRef = useRef(null);
+    const introImageRef = useRef(null)
+    const introTextRef = useRef(null);
+
 
     useEffect(() => {
-        const image = document.querySelector('.intro-image');
-        const text = document.querySelector('.intro-text');
+        // const image = document.querySelector('.intro-image');
+        // const text = document.querySelector('.intro-text');
 
         // Add the show class to trigger the animation on page load for the intro section
-        image.classList.add('show');
-        text.classList.add('show');
+        // image.classList.add('show');
+        // text.classList.add('show');
 
-        observeIntersection([headerRef, textRef, buttonRef]);
+        observeIntersection([introImageRef,introTextRef,headerRef, textRef, buttonRef,moveUpRef]);
     }, []);
+
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    }
 
     return (
         <>
-            <div className='container-fluid d-flex flex-column'>
+            <div className='container-fluid'>
                 <Navbar />
-                <div className='row'>
-                    <div className='intro w-100 '>
+                <div className='row '>
+                    <div className='intro  '>
                         <div className='flex-item w-100'>
-                            <img src="./images/my_pic.png" alt='' className='intro-image' />
+                            <img src="./images/my_pic.png" alt='' className='intro-image' ref={introImageRef}/>
                         </div>
                         <div className='d-flex flex-column flex item w-100 h-100 p-lg-5 '>
-                            <div className='intro-text  text-center'>
+                            <div className='intro-text  text-center' ref={introTextRef}>
                                 <h1 className='header-text'>Dharmendra Sah</h1>
-                                <p className='text-dark font-oswald fs-5 fw-bolder'>Software Engineer | Full Stack Developer</p>
-
+                                <p className='text-dark font-oswald fs-5 fw-bolder animated-text'>Software Engineer | Full Stack Developer</p>
                             </div>
                             <div className=' flex-item qot px-3'>
                                 <Quote />
@@ -46,7 +55,7 @@ const HomePage = () => {
                     </div>
                 </div>
                 <div className='row'>
-                    <div className='about d-flex flex-column align-items-center justify-content-center' ref={aboutMeRef}>
+                    <div className='about d-flex flex-column align-items-center justify-content-center'>
                         <h1 className='p-4 about-me-header header-text' ref={headerRef}>About Me</h1>
                         <p className='about-me-text about-text para-text text-lg-center' ref={textRef}>Hello, I’m a MERN Stack Developer with
                             2 years of real-world experience. My focus is on building dynamic, responsive web applications and crafting efficient
@@ -61,6 +70,10 @@ const HomePage = () => {
                 <ProjectSection />
                 <ContactSection />
                 <Footer />
+                {/* arrow-up button  */}
+                <div className='move-up ' ref={moveUpRef}>
+                    <button onClick={scrollToTop} className='btn-primary'><i className='bi bi-arrow-up'></i></button>
+                </div>
             </div>
         </>
     );

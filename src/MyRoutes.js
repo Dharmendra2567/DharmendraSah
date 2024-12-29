@@ -7,6 +7,7 @@ import AllQuotes from "./AllQuotes";
 import { Contact } from "./pages/Contact";
 import About from "./pages/About";
 import { Footer } from "./components/Footer";
+import ProjectSection from "./components/ProjectSection";
 
 const MyRoutes=()=>{
     return(
@@ -19,6 +20,9 @@ const MyRoutes=()=>{
                 <Route path="/contact" element={<Contact/>}/>
                 <Route path="/about" element={<About/>}/>
                 {/* <Route path="/footer" element={<Footer/>}/> */}
+
+                <Route path="/nav" element={<Navbar/>}/>
+                <Route path="/project" element={<ProjectSection/>}/>
              </Routes>
             </BrowserRouter>
         </>
