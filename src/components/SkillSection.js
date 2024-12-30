@@ -3,19 +3,19 @@ import "../css/SkillSection.css";
 import { observeIntersection } from "../utility/userInterfaceObserver";
 
 const skills = [
-  { name: "JavaScript", percentage: 90, pic:'./Images/js.png' },
-  { name: "Reactjs", percentage: 75, pic:'./Images/react.png'},
-  { name: "Nodejs", percentage: 70, pic:'Images/nodejs.png'},
-  { name: "MongoDB", percentage: 70, pic:'Images/mongodb.png'},
-  { name: "HTML/CSS", percentage: 95, pic:'Images/html.png' },
-  { name: "Bootstrap", percentage: 95, pic:'Images/bootstrap.png' },
-  { name: "C/C++", percentage: 90, pic:'Images/cpp.png' },
-  { name: "JAVA", percentage: 65, pic:'Images/java.png' },
-  { name: "DSA", percentage: 80, pic:'Images/dsa.png' },
-  { name: "Dart/Flutter", percentage: 85, pic:'Images/flutter.png'},
-  { name: "Android App Development", percentage: 80, pic:'Images/android.png'},
-  { name: "Firebase", percentage: 85, pic:'Images/firebase.png'},
-  { name: "API Integration", percentage: 75, pic:'Images/api.png' },
+  { name: "JavaScript", percentage: 90, pic:'./images/js.png' },
+  { name: "Reactjs", percentage: 75, pic:'./images/react.png'},
+  { name: "Nodejs", percentage: 70, pic:'images/nodejs.png'},
+  { name: "MongoDB", percentage: 70, pic:'images/mongodb.png'},
+  { name: "HTML/CSS", percentage: 95, pic:'images/html.png' },
+  { name: "Bootstrap", percentage: 95, pic:'images/bootstrap.png' },
+  { name: "C/C++", percentage: 90, pic:'images/cpp.png' },
+  { name: "JAVA", percentage: 65, pic:'images/java.png' },
+  { name: "DSA", percentage: 80, pic:'images/dsa.png' },
+  { name: "Dart/Flutter", percentage: 85, pic:'images/flutter.png'},
+  { name: "Android App Development", percentage: 80, pic:'images/android.png'},
+  { name: "Firebase", percentage: 85, pic:'images/firebase.png'},
+  { name: "API Integration", percentage: 75, pic:'images/api.png' },
 ];
 
 const SkillSection = () => {
