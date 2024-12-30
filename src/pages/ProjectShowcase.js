@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../components/layout/Navbar';
 import ProjectSection from '../components/ProjectSection';
 import { Footer } from '../components/Footer';
+import MoveToTop from '../components/MoveToTop';
 
  export const ProjectShowcase = () => {
     return (
@@ -11,6 +12,7 @@ import { Footer } from '../components/Footer';
           <div className='' style={{marginTop:'60px'}}>
           <ProjectSection/>
           </div>
+          <MoveToTop/>
           <Footer/>
 
           </div>

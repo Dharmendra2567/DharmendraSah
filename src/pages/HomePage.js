@@ -5,14 +5,16 @@ import { observeIntersection } from '../utility/userInterfaceObserver';
 import ProjectSection from '../components/ProjectSection';
 import ContactSection from '../components/ContactSection';
 import { Footer } from '../components/Footer';
+import SkillSection from '../components/SkillSection';
+import MoveToTop from '../components/MoveToTop';
 
 const HomePage = () => {
+    
+    const introImageRef = useRef(null)
+    const introTextRef = useRef(null);
     const headerRef = useRef(null);
     const textRef = useRef(null);
     const buttonRef = useRef(null);
-    const moveUpRef = useRef(null);
-    const introImageRef = useRef(null)
-    const introTextRef = useRef(null);
 
 
     useEffect(() => {
@@ -23,15 +25,8 @@ const HomePage = () => {
         // image.classList.add('show');
         // text.classList.add('show');
 
-        observeIntersection([introImageRef,introTextRef,headerRef, textRef, buttonRef,moveUpRef]);
+        observeIntersection([introImageRef,introTextRef,headerRef, textRef, buttonRef]);
     }, []);
-
-    function scrollToTop() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-        });
-    }
 
     return (
         <>
@@ -67,13 +62,12 @@ const HomePage = () => {
                         <button className='px-4 m-3 about-button' ref={buttonRef}>Know More</button>
                     </div>
                 </div>
+                <SkillSection/>
                 <ProjectSection />
                 <ContactSection />
+                <MoveToTop/>
                 <Footer />
-                {/* arrow-up button  */}
-                <div className='move-up ' ref={moveUpRef}>
-                    <button onClick={scrollToTop} className='btn-primary'><i className='bi bi-arrow-up'></i></button>
-                </div>
+               
             </div>
         </>
     );

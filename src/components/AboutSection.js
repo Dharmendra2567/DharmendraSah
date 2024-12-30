@@ -11,19 +11,14 @@ const AboutSection = () => {
     const p3Ref = useRef(null)
     const p4Ref = useRef(null)
     const p5Ref  = useRef(null)
-     const moveUpRef = useRef(null);
 
 
     useEffect(()=>{
-        observeIntersection([h1Ref,pRef,h2Ref,p1Ref,p2Ref,p3Ref,p4Ref,p5Ref, moveUpRef]);
+        observeIntersection([h1Ref,pRef,h2Ref,p1Ref,p2Ref,p3Ref,p4Ref,p5Ref]);
     },[]);
 
-    function scrollToTop() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-        });
-    }
+ 
+    
   return (
    <>
      <div className="row text-center">
@@ -154,9 +149,6 @@ const AboutSection = () => {
 
     </div>
 </div>
-<div className='move-up ' ref={moveUpRef}>
-                    <button onClick={scrollToTop} className='btn-primary'><i className='bi bi-arrow-up'></i></button>
-                </div>
 </div>
    </>
   )

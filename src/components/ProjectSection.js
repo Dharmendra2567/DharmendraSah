@@ -44,7 +44,8 @@ import { observeIntersection } from '../utility/userInterfaceObserver';
                                 <h6>Satya PG Web App</h6>
                                 <p>
                                     Developed a fully dynamic furnished with frontend and backend website for <Link 
-                                    to={'https://github.com/Dharmendra2567/jannat_hostel'}><b>Satya PG</b></Link> where I've 
+                                    to={'https://satya-pg.netlify.app/'}><b>Satya PG</b></Link><Link 
+                                    to={'https://github.com/Dharmendra2567/jannat_hostel'}><b>(github)</b></Link> where I've 
                                     implemented API and Payment integration, user role based and database queries.It will be deployed soon.
                                      </p>
                             </div>

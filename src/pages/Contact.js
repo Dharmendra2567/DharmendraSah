@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../components/layout/Navbar'
 import ContactSection from '../components/ContactSection'
 import { Footer } from '../components/Footer'
+import MoveToTop from '../components/MoveToTop'
 
 export const Contact = () => {
   return (
@@ -11,7 +12,9 @@ export const Contact = () => {
       <div className='' style={{marginTop:'60px'}}>
       <ContactSection/>
       </div>
+      <MoveToTop/>
        <Footer/>
+    
       </div>
     </>
   )
