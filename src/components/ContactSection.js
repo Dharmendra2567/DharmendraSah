@@ -19,8 +19,15 @@ const ContactSection = () => {
             <img src='./images/what_ask.png' className='h-80 w-50' alt='myImage' ></img>
             <div className='d-flex justify-content-end contact-icon'>
               <a id='insta' href='https://www.instagram.com/_dear_dharmendra/?hl=en' target='_blank' rel='noopener noreferrer'><img src='./images/insta22.png' alt='insta icon'></img></a>
-              <a id='linkedin' href='https://www.linkedin.com/in/dharmendra-prasad-sah-teli-b46340254/' target='_blank' rel='noopener noreferrer'><img src='./images/linkedin1.jpg' alt='linkedin logo'></img></a>
-              <a id='mail' href='https://mail.google.com/mail/?view=cm&fs=1&to=deardharmendra.2567@gmail.com' target='_blank' rel='noopener noreferrer'><img src='./images/gmail1.png' alt='gmail-logo' /></a>
+              <a id='linkedin' href='https://www.linkedin.com/in/dharmendra-prasad-sah-b46340254/' target='_blank' rel='noopener noreferrer'><img src='./images/linkedin1.jpg' alt='linkedin logo'></img></a>
+
+              <a id="mail"
+                href="mailto:deardharmendra.2567@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer">
+                <img src="./images/gmail1.png" alt="gmail-logo" />
+              </a>
+
               <a id='github' className='light' href='https://www.github.com/Dharmendra2567' target='_blank' rel='noopener noreferrer'> <img src='./images/github_icon1.png' alt='github logo'></img></a>
             </div>
             <div className='' style={{ fontFamily: '"Robota", sans-serif' }}>
